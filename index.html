@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A fast weather app: current conditions, 24-hour and 7-day forecast for any city.">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-sky="clear">
+    <main class="app">
+        <header class="top">
+            <h1>Weather</h1>
+            <button type="button" id="unitBtn" class="pill" aria-label="Switch temperature unit">Show °F</button>
+        </header>
+
+        <form id="searchForm" class="search" role="search">
+            <label for="cityInput" class="sr-only">City name</label>
+            <input id="cityInput" type="search" placeholder="Search a city, e.g. Jaipur or Paris, FR" maxlength="60" autocomplete="off">
+            <button type="submit" id="searchBtn" class="primary">Search</button>
+            <button type="button" id="locBtn" class="ghost" title="Use my location" aria-label="Use my location">📍</button>
+        </form>
+
+        <p id="status" role="status" aria-live="polite"></p>
+        <div id="matches" class="chips" hidden></div>
+        <div id="recent" class="chips" hidden></div>
+
+        <section id="weather" hidden>
+            <div class="card hero">
+                <div>
+                    <p class="place" id="placeName"></p>
+                    <p class="muted small" id="updated"></p>
+                    <p class="temp" id="temp"></p>
+                    <p class="cond" id="cond"></p>
+                    <p class="muted" id="hilo"></p>
+                </div>
+                <div class="hero-icon" id="heroIcon" aria-hidden="true"></div>
+            </div>
+
+            <div class="details" id="details"></div>
+
+            <div class="card">
+                <h2>Next 24 hours</h2>
+                <div class="hourly" id="hourly"></div>
+            </div>
+
+            <div class="card">
+                <h2>7-day forecast</h2>
+                <ul class="daily" id="daily"></ul>
+            </div>
+        </section>
+
+        <footer class="muted small">
+            Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a> (CC BY 4.0)
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
