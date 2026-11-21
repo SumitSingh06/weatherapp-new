@@ -2,7 +2,7 @@
 
 A fast, responsive weather app built with plain HTML, CSS and JavaScript. Search any city and see its current weather, the next 24 hours and a 7-day forecast.
 
-**Live app:** ADD_YOUR_VERCEL_LINK_HERE
+**Live app:** (https://weatherapp-new-gamma.vercel.app)
 
 ## Features
 - Search any city (use `City, Country` such as `Paris, FR` to be specific)
